@@ -8,4 +8,5 @@ public interface PassengerDAO {
 	Passenger readOne(int id);
 	List<Passenger> readAll();
 	int update(Passenger passenger);
+	int delete(int id);
 }
