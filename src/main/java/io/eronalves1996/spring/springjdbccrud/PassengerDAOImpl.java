@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("dao")
 public class PassengerDAOImpl implements PassengerDAO {
 
 	@Autowired
@@ -14,7 +14,7 @@ public class PassengerDAOImpl implements PassengerDAO {
 	
 	@Override
 	public int create(Passenger passenger) {
-		String sql = "INSERT INTO Passengers (?, ?, ?)";
+		String sql = "INSERT INTO Passengers VALUES (?, ?, ?)";
 		return jdbcTempl.update(sql, passenger.getId(), passenger.getFirstName(), passenger.getLastName());
 	}
 
