@@ -7,4 +7,5 @@ public interface PassengerDAO {
 	int create(Passenger passenger);
 	Passenger readOne(int id);
 	List<Passenger> readAll();
+	int update(Passenger passenger);
 }

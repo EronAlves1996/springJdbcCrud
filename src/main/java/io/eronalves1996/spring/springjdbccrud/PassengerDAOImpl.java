@@ -30,4 +30,10 @@ public class PassengerDAOImpl implements PassengerDAO {
 		return jdbcTempl.query(sql, new PassengerRowMapper());
 	}
 
+	@Override
+	public int update(Passenger passenger) {
+		String sql = "UPDATE Passengers SET first_name=?, last_name=? WHERE id=?";
+		return jdbcTempl.update(sql, passenger.getFirstName(), passenger.getLastName(), passenger.getId());
+	}
+
 }
