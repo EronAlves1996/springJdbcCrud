@@ -6,6 +6,12 @@ public class Passenger {
 	private String firstName;
 	private String lastName;
 
+	public Passenger(int id, String firstName, String lastName) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
